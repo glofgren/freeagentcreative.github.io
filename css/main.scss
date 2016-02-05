@@ -6,8 +6,8 @@
 @import "fonts";
 
 body {
-  font-family: "verb", Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "verblight", Helvetica, sans-serif;
+  font-weight: normal;
 }
 
 h2, h4 {
@@ -16,15 +16,102 @@ h2, h4 {
   font-weight: bold;
 }
 
+section.hero {
+  background-image: url('/assets/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 100px;
+
+  header {
+    h1 {
+      font-size: 32px;
+      font-family: "verbextralight";
+      line-height: 1.7;
+    }
+  }
+}
+
+section {
+  padding: 50px 0;
+
+  h2 {
+    padding: 15px 25px 10px;
+    line-height: 1;
+    display: inline;
+  }
+}
+
 section.gray {
   background: url('/assets/slateTexture.jpg') no-repeat top center;
   background-size: cover;
+
+  h2 {
+    background: #000;
+    color: white;
+  }
 }
 
 section.black {
-  background: #000;
+  background-color: #000;
+  color: #fff;
+
+  h2 {
+    color: black;
+    background: white;
+  }
 }
 
 section.white {
-  background: #fff;
+  background-color: #fff;
+
+  h2 {
+    background: #000;
+    color: white;
+  }
+}
+
+.btn {
+  border-radius: 0;
+
+  &.btn-default {
+    background: #000;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 30px;
+  }
+}
+
+nav {
+  height: 180px;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: block;
+    background: white;
+    -webkit-transform: rotate(-24.5deg) skew(40deg);
+    -moz-transform: rotate(-24.5deg) skew(40deg);
+    -ms-transform: rotate(-24.5deg) skew(40deg);
+    transform: rotate(-24.5deg) skew(40deg);
+    height: 200px;
+    width: 280px;
+    bottom: -80px;
+    z-index: 1;
+  }
+
+  img {
+    width: 250px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: -23px;
+    z-index: 2;
+  }
 }
